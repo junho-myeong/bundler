@@ -1,0 +1,9 @@
+$color--black: #000;
+$color--white: #fff;
+
+body {
+  h1 {
+    background-color: $color--black;
+    color: $color--white;
+  }
+}
