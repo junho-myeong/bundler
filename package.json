@@ -4,7 +4,7 @@
   "description": "- 웹에서는 기본적으로 html,css,js가 작동을 한다. 순수 html,css,js만 가지고 작성을하게 되면 비효울적인 면이 존재한다.\r - 그래서 scss,vue.js같은 패키지들을 이용해서 좀더 고도화된 기능으로 작업을 진행할수 잇는데\r - 그것들이 웹에서 바로 동적이 불가능 하기 떄문에 bundelr를 통해 html,css,js로 변환시켜주는 역할을 한다.\r - bundler가 모든패키지를 모든것을 다 변환시켜줄순 없지만, bundler가 외부 패키지에 도움을 받아서 변환을 할수잇다.\r - 즉 bundler자체가 변환하는것이 아니고 위임을 받아서 변환을 하는것이다.\r - 즉 bundler가 외부의 패키지들을 가져와서 변환을 해준다는것이다.\r 1. parcel vs webpack\r   1. parcel - 구성 없는 자동 번들링(소/중형 프로젝트에 적합)\r   1. webpack- 매우 꼼꼼한 구성 (중/대형 프로젝트에 적합)",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel index.html --port 1216",
     "bulid": "parcel bulid index.html"
   },
   "repository": {
@@ -19,7 +19,20 @@
   },
   "homepage": "https://github.com/junho-myeong/bundler#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "autoprefixer": "^9.8.8",
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.4.16",
     "sass": "^1.54.5"
-  }
+  },
+  "staticFiles": {
+    "staticPath": "static"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
