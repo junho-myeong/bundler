@@ -3,8 +3,8 @@
 ## bundler?
 - 웹에서는 기본적으로 html,css,js가 작동을 한다. 순수 html,css,js만 가지고 작성을하게 되면 비효울적인 면이 존재한다.
 - 그래서 scss,vue.js같은 패키지들을 이용해서 좀더 고도화된 기능으로 작업을 진행할수 잇는데
-- 그것들이 웹에서 바로 동적이 불가능 하기 떄문에 bundelr를 통해 html,css,js로 변환시켜주는 역할을 한다.
-- bundler가 모든패키지를 모든것을 다 변환시켜줄순 없지만, bundler가 외부 패키지에 도움을 받아서 변환을 할수잇다.
+- 그것들이 웹에서 바로 동작이 불가능 하기 떄문에 bundelr를 통해 html,css,js로 변환시켜주는 역할을 한다.
+- bundler가 모든패키지를 다 변환시켜줄순 없지만, bundler가 외부 패키지에 도움을 받아서 변환을 할수잇다.
 - 즉 bundler자체가 변환하는것이 아니고 위임을 받아서 변환을 하는것이다.
 - 즉 bundler가 외부의 패키지들을 가져와서 변환을 해준다는것이다.
 1. parcel vs webpack
@@ -42,11 +42,12 @@
 ## babel(컴파일러)
 - Babel은 ECMAScript 2015+ 코드를 이전 JavaScript 엔진에서 실행할 수 있는 이전 버전과 호환되는 JavaScript 버전으로 변환하는 데 주로 사용되는 무료 오픈 소스 JavaScript 트랜스컴파일러입니다.
 - ES6,ES7,ES9 => ES5로 변환시키는 역할을 한다.
-- 설치방법  npm i -D @babel/core @bable/present-env
--  npm i -D @babel/plugin-transform-runtime (async await 분법이 돌아가게 해주는 패지키를 설치하는 것이다.)
+- 설치방법  npm i -D @babel/core @bable/preset-env
+-  npm i -D @babel/plugin-transform-runtime (async await 문법이 돌아가게 해주는 패지키를 설치하는 것이다.)
 
 ## CLI Parcel
 - https://ko.parceljs.org/cli.html
+- parcel bundler는 기본적으로 서버를 오픈 할때 기본 값들을 가지고 잇지만, 우리의 편의에 따라서 그 값을 변경해야하는경우가 잇다. 예를들면(parcel을 통해 생성되는 파일을 dist라는 이름의 폴더가 아닌 다른 폴더로 바꾼다 던지, 아니면 현재 port를 1234로 사용하고 잇는것을 다른 포트 번호로 바꾼다 던지)
 - 기본옵션으로 사용하는것이 가장 편리하긴 하지만 필요에 따라서 이렇게 변경 해줘야 하는경우도 잇다.
 
 ## 저장소 업로드
